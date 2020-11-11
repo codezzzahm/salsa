@@ -1,0 +1,121 @@
+2020-11-06 16:21:53,988 ERROR: Exception on /images/db/Azar [GET] [in /data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py:1758]
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/storage/emulated/0/python/microblog/app/routes.py", line 212, in get_image_from_db
+    return app.response_class(image.img_data, mimetype='application/octet-stream')
+AttributeError: 'NoneType' object has no attribute 'img_data'
+2020-11-06 16:23:19,380 ERROR: Exception on /delete_profile [GET] [in /data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py:1758]
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask_login/utils.py", line 228, in decorated_view
+    return func(*args, **kwargs)
+  File "/storage/emulated/0/python/microblog/app/routes.py", line 299, in delete_profile
+    db.session.commit(img)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/sqlalchemy/orm/scoping.py", line 157, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+TypeError: commit() takes 1 positional argument but 2 were given
+2020-11-06 16:24:10,710 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:50]
+2020-11-06 16:24:13,190 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:50]
+2020-11-06 17:35:27,508 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:50]
+2020-11-06 17:35:31,700 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:50]
+2020-11-06 17:45:13,009 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:50]
+2020-11-06 18:14:27,075 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:50]
+2020-11-06 18:14:31,297 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:50]
+2020-11-06 18:15:05,813 ERROR: Exception on /edit_profile [POST] [in /data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py:1758]
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask_login/utils.py", line 228, in decorated_view
+    return func(*args, **kwargs)
+  File "/storage/emulated/0/python/microblog/app/routes.py", line 270, in edit_profile
+    imgfile.save(os.path.join("/static", current_user.username+".jpg"))
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/werkzeug/datastructures.py", line 2725, in save
+    dst = open(dst, 'wb')
+FileNotFoundError: [Errno 2] No such file or directory: '/static/Aslam.jpg'
+2020-11-06 18:15:48,541 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:50]
+2020-11-06 18:15:51,008 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:50]
+2020-11-06 18:16:02,453 ERROR: Exception on /edit_profile [POST] [in /data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py:1758]
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask_login/utils.py", line 228, in decorated_view
+    return func(*args, **kwargs)
+  File "/storage/emulated/0/python/microblog/app/routes.py", line 270, in edit_profile
+    imgfile.save(os.path.join("/static/", current_user.username+".jpg"))
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/werkzeug/datastructures.py", line 2725, in save
+    dst = open(dst, 'wb')
+FileNotFoundError: [Errno 2] No such file or directory: '/static/Aslam.jpg'
+2020-11-06 18:16:41,328 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:50]
+2020-11-06 18:16:49,163 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:50]
+2020-11-06 18:17:05,088 ERROR: Exception on /edit_profile [POST] [in /data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py:1758]
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask_login/utils.py", line 228, in decorated_view
+    return func(*args, **kwargs)
+  File "/storage/emulated/0/python/microblog/app/routes.py", line 270, in edit_profile
+    imgfile.save(os.path.join("/app/static", current_user.username+".jpg"))
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/werkzeug/datastructures.py", line 2725, in save
+    dst = open(dst, 'wb')
+FileNotFoundError: [Errno 2] No such file or directory: '/app/static/Aslam.jpg'
+2020-11-06 18:18:04,696 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:50]
+2020-11-06 18:18:19,772 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:50]
+2020-11-06 18:18:25,709 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:50]
+2020-11-06 18:20:55,296 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:50]
+2020-11-06 18:20:57,720 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:50]
+2020-11-06 18:22:38,093 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:50]
+2020-11-06 18:22:40,275 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:50]
+2020-11-06 18:55:20,982 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:50]
+2020-11-06 18:55:26,631 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:50]

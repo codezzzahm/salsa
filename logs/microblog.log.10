@@ -1,0 +1,89 @@
+2020-11-06 15:48:38,304 ERROR: Exception on /article_1 [GET] [in /data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py:1758]
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1178, in _execute_context
+    self.dialect.do_execute(
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 470, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such column: post.timestamp
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/storage/emulated/0/python/microblog/app/routes.py", line 447, in article_1
+    return render_template('telegrambotai.html',form=form,posts=posts)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/templating.py", line 117, in _render
+    rv = template.render(context)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/storage/emulated/0/python/microblog/app/templates/telegrambotai.html", line 2, in <module>
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "/storage/emulated/0/python/microblog/app/templates/base.html", line 1, in <module>
+    {% extends 'bootstrap/base.html' %}
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in <module>
+    {% block doc -%}
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in <module>
+    {%- block html %}
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in <module>
+    {% block body -%}
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in <module>
+    {% block content -%}
+  File "/storage/emulated/0/python/microblog/app/templates/base.html", line 51, in <module>
+    {% block app_content %}{% endblock %}
+  File "/storage/emulated/0/python/microblog/app/templates/telegrambotai.html", line 98, in <module>
+    {% for post in posts %}
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/sqlalchemy/orm/query.py", line 2855, in __iter__
+    return self._execute_and_instances(context)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/sqlalchemy/orm/query.py", line 2878, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 945, in execute
+    return meth(self, multiparams, params)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/sqlalchemy/sql/elements.py", line 263, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1048, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1184, in _execute_context
+    self._handle_dbapi_exception(
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1400, in _handle_dbapi_exception
+    util.raise_from_cause(
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 203, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 186, in reraise
+    raise value.with_traceback(tb)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1178, in _execute_context
+    self.dialect.do_execute(
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 470, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such column: post.timestamp [SQL: 'SELECT article1.id AS article1_id, article1.body AS article1_body, article1.timestamp AS article1_timestamp, article1.user_id AS article1_user_id \nFROM article1 ORDER BY post.timestamp DESC']
+2020-11-06 15:49:18,602 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:50]
+2020-11-06 15:49:21,609 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:50]
+2020-11-06 15:51:01,800 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:50]
+2020-11-06 15:51:04,075 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:50]
+2020-11-06 16:04:42,976 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:50]
+2020-11-06 16:04:45,444 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:50]
+2020-11-06 16:06:00,242 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:50]
+2020-11-06 16:10:01,313 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:50]
+2020-11-06 16:10:16,642 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:50]
+2020-11-06 16:10:57,132 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:50]
+2020-11-06 16:11:01,332 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:50]
+2020-11-06 16:11:34,725 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:50]
+2020-11-06 16:11:36,757 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:50]

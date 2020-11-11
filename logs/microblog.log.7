@@ -1,0 +1,120 @@
+2020-11-06 18:55:50,891 ERROR: Exception on /edit_profile [POST] [in /data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py:1758]
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask_login/utils.py", line 228, in decorated_view
+    return func(*args, **kwargs)
+  File "/storage/emulated/0/python/microblog/app/routes.py", line 271, in edit_profile
+    mask = Image.open('app/uploads/mask.png').convert('L')
+AttributeError: type object 'Image' has no attribute 'open'
+2020-11-06 18:56:29,955 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:50]
+2020-11-06 18:56:32,418 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:50]
+2020-11-06 18:56:37,280 ERROR: Exception on /images/db/Aslam [GET] [in /data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py:1758]
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/storage/emulated/0/python/microblog/app/routes.py", line 212, in get_image_from_db
+    image = Image.query.filter_by(author=user).first()
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/PIL/Image.py", line 62, in __getattr__
+    raise AttributeError(f"module '{__name__}' has no attribute '{name}'")
+AttributeError: module 'PIL.Image' has no attribute 'query'
+2020-11-06 18:56:43,188 ERROR: Exception on /images/db/Aslam [GET] [in /data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py:1758]
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/storage/emulated/0/python/microblog/app/routes.py", line 212, in get_image_from_db
+    image = Image.query.filter_by(author=user).first()
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/PIL/Image.py", line 62, in __getattr__
+    raise AttributeError(f"module '{__name__}' has no attribute '{name}'")
+AttributeError: module 'PIL.Image' has no attribute 'query'
+2020-11-06 18:56:51,095 ERROR: Exception on /images/db/Aslam [GET] [in /data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py:1758]
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/storage/emulated/0/python/microblog/app/routes.py", line 212, in get_image_from_db
+    image = Image.query.filter_by(author=user).first()
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/PIL/Image.py", line 62, in __getattr__
+    raise AttributeError(f"module '{__name__}' has no attribute '{name}'")
+AttributeError: module 'PIL.Image' has no attribute 'query'
+2020-11-06 18:56:57,779 ERROR: Exception on /edit_profile [POST] [in /data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py:1758]
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask_login/utils.py", line 228, in decorated_view
+    return func(*args, **kwargs)
+  File "/storage/emulated/0/python/microblog/app/routes.py", line 272, in edit_profile
+    mask = Image.open('app/uploads/mask.png').convert('L')
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/PIL/Image.py", line 2943, in open
+    raise UnidentifiedImageError(
+PIL.UnidentifiedImageError: cannot identify image file 'app/uploads/mask.png'
+2020-11-06 19:00:48,611 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:50]
+2020-11-06 19:00:51,297 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:50]
+2020-11-06 19:00:54,750 ERROR: Exception on /images/db/Aslam [GET] [in /data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py:1758]
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/storage/emulated/0/python/microblog/app/routes.py", line 212, in get_image_from_db
+    image = Image.query.filter_by(author=user).first()
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/PIL/Image.py", line 62, in __getattr__
+    raise AttributeError(f"module '{__name__}' has no attribute '{name}'")
+AttributeError: module 'PIL.Image' has no attribute 'query'

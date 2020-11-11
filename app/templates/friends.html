@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
+{% block app_content %} 
+
+    <h1>Friends</h1> 
+    <i>Hint:People who wish to be your friend and your friends</i>
+    {% for post in messages %} 
+     {% if post.username!=current_user.username %}
+            <table class="table table-hover">
+        <tr> 
+            <td width="60px"> 
+                <a href="{{ url_for('user', username=post.username) }}">
+                    <img src="/static/{{post.username}}.png" style="width: 60px">
+                </a>
+            </td> 
+            <td><a href="{{ url_for('user', username=post.username) }}">{{post.username}}</a>
+            <br>
+            {% if post.about_me %}
+            <i>{{post.about_me}}</i> 
+            {% endif %} <br>
+             <form action="{{ url_for('unfriend', username=post.username) }}" method="post">
+                        {{ form.hidden_tag() }}
+                        {{ form.submit(value='Unfriend', class_='btn btn-default') }}
+                  </form>       
+            </td> 
+                  <td> <a href="{{url_for('messages', recipient=post.username)}}">Chat
+                  </a>
+                  </td> 
+            </tr>
+            </table> 
+            {% endif %}
+            {% endfor %}
+{% endblock %}

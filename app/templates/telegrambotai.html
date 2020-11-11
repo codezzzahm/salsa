@@ -1,0 +1,119 @@
+{% extends "base.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block app_content %}
+    <h3>Machine Learning (or so called artificial intelligence) Telegram bot in 16 lines of code.</h3> 
+    <p>
+      <b>M</b>aking a ML powered chatbot is not that tough if you are smart(well...lazy as well as like me...)
+    </p> 
+    <center><img src="/static/boomer.jpg"/ style="width:120px"></center>
+    <p>
+      <b>A</b>t the end of this article you will realize that.
+    </p> 
+    <p>
+      <b>I</b> chose python for this, because of simplicity and cleanliness. 
+    </p>
+      <p>
+        <b>A</b>s usual,first step is, obtain your unique bot token from your telegram app.
+      </p> 
+    <p>
+      <b>C</b>hat with @BotFather on telegram.
+    </p>
+      <p><center><img src="/static/ss2.jpg"/ style="width:100%"></center></p>
+    <p>
+      <b>W</b>ell, i assume you already have a basic knowledge about python and how stuff works. 
+    </p> 
+    <p>
+      <b>I</b>f not, dont worry, its easy, just google about python basics. you will get a good hold on python for sure.
+    </p> 
+    <p>
+      <b>I</b> used  <a href="https://github.com/python-telegram-bot/python-telegram-bot"><b><i>python-telegram-bot</i></b></a>  library which is quite famous, to interact with telegram api(bot). So install that by,
+    </p> 
+    <p><center><i>pip install python-telegram-bot</i></center></p>
+    <p><b>N</b>ext, i am going to use a <b><i>coffeehouse</i></b> library which offers <b><i>LydiaAI</i></b>.</p> 
+    <p><b>B</b>ut wait...before that you need <b><i>api key</i></b> to access <b><i>LydiaAI</i></b> :)</p>
+    <p><b>R</b>egister a account on their <a href="https://coffeehouse.intellivoid.info/"><b><i>site</i></b></a> and get free <b><i>api key</i></b>.</p> 
+    <p><b>N</b>ow install that too,</p> 
+    <p><center><i>pip install coffeehouse</i></center></p>
+    <p><b>I</b>ts a good time to show you my code and explain it step by step.</p>
+    <center><img src="/static/ss3.jpg"/ style="width:100%"></center> 
+   
+    <p><b><i>Line 1:</i></b> You might be little confused here. but <b><i>telegram.ext</i></b> is nothing but the package we installed at first. then i import the <b><i>Updater</i></b>, <b><i>MessageHandler</i></b> and <b><i>Filters</i></b> modules from that.  here i will brief them all little bit, but you can always read the docs. 
+    <p>
+      <b><i>Updater :</i></b> You can assume this module as a mail man. purpose is simply deliver the telegram updates to you. so that, you can program how the updates should work.
+    </p>
+      <b><i>MessageHandler :</i></b> As the name, it handles all the messages from our side. for example you send <i><b>'Hi'</b></i> to bot. now the bot should reply to you. for that reason <b><i>MessageHandler</i></b> exists. you can now make your bot say <i><b>'Hello'</b></i> to your <i><b>'Hi'</b></i> message. 
+    </p> 
+    <p>
+      <b><i>Filters :</i></b> This one is for filter the message type. for example the message <b><i>'Hi'</i></b> comes in text type. to filter all the message with text type, you say like <b>Filters.text</b> likewise.
+    </p>
+    <p>
+      <b><i>Line 2:</i></b> Importing <b><i>LydiaAI</i></b> from <b><i>coffeehouse</i></b> package.
+      </p>
+    <p>
+      <b><i>Line 3:</i></b> Create the object to use <b><i>LydiaAI</i></b>, along with your obtained <b><i>api key</i></b> from <b><i>coffeehouse</i></b> that you registered earlier.
+      </p> 
+     <p>
+       <b><i>Line 4:</i></b> Start your session with command <b><i>create_session("en")</i></b>. <b><i>"en"</i></b> means you choose English for bot communication.
+     </p>
+    <p>
+      <b><i>Line 5:</i></b> Your bot token.
+    </p> 
+    <p>
+    <b><i>Line 6:</i></b> Define the function <b><i>chat</i></b> (you can name it whatever you want) with <b><i>update</i></b> and <b><i>context</i></b>. 
+    <p><b><i>update -</i></b> is the incoming updates to the bot(which is the messages).</p> 
+    <p><b><i>context -</i></b> Dont give a shit about this(not that important). </p>
+    </p>
+    <p>
+      <b><i>Line 7:</i></b> This interesting line is actually the core of this program. <b><i>think_thought</i></b> is a built-in <b><i>LydiaAI</i></b> function that receives input, process and reply the correct output. <p>here the input is a message from our side which is <b><i>update.message.text</i></b>.</p> <p>by that i get output and store it in <b><i>output</i></b> object.</p>
+    </p> 
+    <p>
+      <b><i>Line 8:</i></b> Now the output is ready to deliver. for that <b><i>reply_text</i></b> function is used. it will reply the output for messages to the bot.
+    </p>
+    <p>
+      <b> <i>Line 9:</i></b> Defining main function.
+    </p>
+    <p>
+      <b><i>Line 10:</i></b> I am declaring here that i need <b><i>Updater</i></b> for my bot by my <b><i>bot token</i></b> 
+      <p><b>Line 11:</i></b> As the name, it dispatches all the updates to the fuction we created previous by <b><i>Handlers</i></b>. <p>there are handlers like <b><i>MessageHandler</i></b>(for messages), <b><i>CommandHandler</i></b>(for commands).</p> <p>read the docs period!.</p></p> 
+        </p>
+      </p> 
+     <p>
+       <b><i>Line 12:</i></b> Adding handlers to the messages by <b><i>add_handler</i></b> fuction. 
+       <p>the handler we need is <b><i>MessageHandler</i></b> for all the messages with text type <b><i>Filters.text</i></b> and handling the messages to <b><i>chat</i></b> fuction we created previous.
+       </p>
+     </p> 
+     <p>
+       <b><i>Line 13,14:</i></b> What <b><i>start_polling()</i></b> do is make our program wait for all the upcoming new messages then goes to <b><i>idle()</i></b> if no messages.
+     </p> 
+     <p>
+       <b><i>Line 15,16:</i></b> Calling the fuction as usual.
+     </p> 
+     <p>Now all you need is run your script in terminal, send a message to your bot and you will see the reply! You will be wondered about your bot.</p>
+    {% if form %}
+    {{ wtf.quick_form(form) }}
+    <br>
+    {% endif %} 
+    <b>Comments</b>
+    {% for post in posts %}
+            <table class="table table-hover">
+        <tr>
+            <td width="60px">
+                <a href="{{ url_for('user', username=post.author.username) }}">
+                    <img src="/static/{{post.author.username}}.png" style="width: 60px">
+                </a>
+            </td>
+            <td>
+                <a href="{{ url_for('user', username=post.author.username) }}">
+                    {{ post.author.username }}
+                </a>
+                 {{ moment(post.timestamp).fromNow() }}:
+                <br> 
+                {{ post.body }} 
+                <br>
+            </td>
+        </tr>
+    </table>
+
+    {% endfor %}
+{% endblock %}

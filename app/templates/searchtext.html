@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block app_content %}
+    <h1>Search</h1> 
+    <i>Hint: Dont use capital letters.</i>
+    {% if form %}
+    {{ wtf.quick_form(form) }}
+    <br>
+    {% endif %}
+    {% for post in posts %}
+        {% include '_post.html' %}
+    {% endfor %} 
+    {% if user %}
+   <a href="{{ url_for('user', username=user.username) }}"> 
+    <img src="/static/{{user.username}}.png" style="width: 60px">
+   {{user.username}}</a><br> 
+   {% endif %}
+{% endblock %}

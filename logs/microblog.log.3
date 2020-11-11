@@ -1,0 +1,115 @@
+2020-11-06 20:22:12,862 ERROR: Exception on /user/Aslam [GET] [in /data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py:1758]
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask_login/utils.py", line 228, in decorated_view
+    return func(*args, **kwargs)
+  File "/storage/emulated/0/python/microblog/app/routes.py", line 252, in user
+    return render_template('user.html', user=user, posts=posts.items,next_url=next_url, prev_url=prev_url, form=form,posttype=True)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/templating.py", line 117, in _render
+    rv = template.render(context)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/storage/emulated/0/python/microblog/app/templates/user.html", line 1, in <module>
+    {% extends "base.html" %}
+  File "/storage/emulated/0/python/microblog/app/templates/base.html", line 1, in <module>
+    {% extends 'bootstrap/base.html' %}
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in <module>
+    {% block doc -%}
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in <module>
+    {%- block html %}
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in <module>
+    {% block body -%}
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in <module>
+    {% block content -%}
+  File "/storage/emulated/0/python/microblog/app/templates/base.html", line 52, in <module>
+    {% block app_content %}{% endblock %}
+  File "/storage/emulated/0/python/microblog/app/templates/user.html", line 7, in <module>
+    <img src="{{user.avatar(110)}}" style="width: 110px">
+  File "/storage/emulated/0/python/microblog/app/models.py", line 62, in avatar
+    im = Image.open(os.path.join('app/static',self.username+".png"))
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/PIL/Image.py", line 2943, in open
+    raise UnidentifiedImageError(
+PIL.UnidentifiedImageError: cannot identify image file 'app/static/Aslam.png'
+2020-11-06 20:30:38,086 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:50]
+2020-11-06 20:31:46,037 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:50]
+2020-11-06 20:31:50,848 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:50]
+2020-11-06 20:35:22,042 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:50]
+2020-11-06 20:35:24,495 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:50]
+2020-11-06 20:36:01,006 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:50]
+2020-11-06 20:36:03,396 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:50]
+2020-11-06 20:36:26,556 ERROR: Exception on /article_1 [GET] [in /data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py:1758]
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/storage/emulated/0/python/microblog/app/routes.py", line 438, in article_1
+    return render_template('telegrambotai.html',form=form,posts=posts,title='Article')
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/templating.py", line 117, in _render
+    rv = template.render(context)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/storage/emulated/0/python/microblog/app/templates/telegrambotai.html", line 2, in <module>
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "/storage/emulated/0/python/microblog/app/templates/base.html", line 1, in <module>
+    {% extends 'bootstrap/base.html' %}
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in <module>
+    {% block doc -%}
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in <module>
+    {%- block html %}
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in <module>
+    {% block body -%}
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in <module>
+    {% block content -%}
+  File "/storage/emulated/0/python/microblog/app/templates/base.html", line 52, in <module>
+    {% block app_content %}{% endblock %}
+  File "/storage/emulated/0/python/microblog/app/templates/telegrambotai.html", line 103, in <module>
+    <img src="{{url_for('get_image_from_db', name=post.author.username)}}" style="width: 70px">
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/helpers.py", line 356, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 2061, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/helpers.py", line 344, in url_for
+    rv = url_adapter.build(endpoint, values, method=method,
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/werkzeug/routing.py", line 1776, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'get_image_from_db' with values ['name']. Did you mean 'editmessage' instead?
+2020-11-06 20:41:35,040 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:50]
+2020-11-06 20:41:37,376 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:50]

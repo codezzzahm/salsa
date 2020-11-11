@@ -1,0 +1,117 @@
+2020-11-06 21:10:21,364 ERROR: Exception on /edit_profile [POST] [in /data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py:1758]
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask_login/utils.py", line 228, in decorated_view
+    return func(*args, **kwargs)
+  File "/storage/emulated/0/python/microblog/app/routes.py", line 275, in edit_profile
+    im = Image.open(os.path.join('app/uploads',current_user.username+".jpg"))
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/PIL/Image.py", line 2943, in open
+    raise UnidentifiedImageError(
+PIL.UnidentifiedImageError: cannot identify image file 'app/uploads/Aslam.jpg'
+2020-11-06 21:12:27,490 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:50]
+2020-11-06 21:12:30,559 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:50]
+2020-11-06 21:12:43,820 ERROR: Exception on /edit_profile [POST] [in /data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py:1758]
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask_login/utils.py", line 228, in decorated_view
+    return func(*args, **kwargs)
+  File "/storage/emulated/0/python/microblog/app/routes.py", line 271, in edit_profile
+    im = Image.open(os.path.join('app/uploads',current_user.username+".jpg"))
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/PIL/Image.py", line 2943, in open
+    raise UnidentifiedImageError(
+PIL.UnidentifiedImageError: cannot identify image file 'app/uploads/Aslam.jpg'
+2020-11-06 21:13:56,695 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:50]
+2020-11-06 21:13:58,805 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:50]
+2020-11-06 21:14:13,367 ERROR: Exception on /edit_profile [POST] [in /data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py:1758]
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask_login/utils.py", line 228, in decorated_view
+    return func(*args, **kwargs)
+  File "/storage/emulated/0/python/microblog/app/routes.py", line 271, in edit_profile
+    im = Image.open(os.path.join('app/uploads',current_user.username+".jpg"))
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/PIL/Image.py", line 2943, in open
+    raise UnidentifiedImageError(
+PIL.UnidentifiedImageError: cannot identify image file 'app/uploads/Aslam.jpg'
+2020-11-06 21:14:42,883 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:50]
+2020-11-06 21:14:45,071 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:50]
+2020-11-06 21:15:44,003 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:50]
+2020-11-06 21:15:47,051 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:50]
+2020-11-06 21:20:29,977 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:50]
+2020-11-06 21:20:32,705 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:50]
+2020-11-06 21:20:54,781 ERROR: Exception on /edit_profile [POST] [in /data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py:1758]
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask_login/utils.py", line 228, in decorated_view
+    return func(*args, **kwargs)
+  File "/storage/emulated/0/python/microblog/app/routes.py", line 279, in edit_profile
+    output = ImageOps.fit(im, mask.size, centering=(0.5, 0.5))
+UnboundLocalError: local variable 'im' referenced before assignment
+2020-11-06 22:06:05,726 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:50]
+2020-11-06 22:06:11,298 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:50]
+2020-11-06 22:07:37,989 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:50]
+2020-11-06 22:07:40,080 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:50]
+2020-11-06 22:08:57,491 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:50]
+2020-11-06 22:09:00,316 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:50]
+2020-11-06 22:10:01,128 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:50]
+2020-11-06 23:10:46,696 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:50]
+2020-11-07 15:52:59,714 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:54]
+2020-11-07 15:53:03,527 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:54]
+2020-11-07 16:10:01,451 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:54]
+2020-11-07 16:11:06,914 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:54]
+2020-11-07 17:29:48,322 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:54]
+2020-11-07 17:30:00,846 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:54]
+2020-11-07 17:35:56,942 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:54]
+2020-11-07 17:36:22,567 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:54]
+2020-11-07 17:36:42,633 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:54]
+2020-11-07 17:37:08,033 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:54]
+2020-11-07 17:39:08,310 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:54]
+2020-11-07 17:39:28,224 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:54]
+2020-11-07 17:39:30,681 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:54]
+2020-11-07 17:39:59,812 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:54]
+2020-11-07 17:40:01,914 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:54]
+2020-11-07 20:40:33,821 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:54]
+2020-11-08 10:38:42,924 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:54]

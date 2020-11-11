@@ -1,0 +1,109 @@
+2020-11-06 16:11:44,526 ERROR: Exception on /article_1 [POST] [in /data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py:1758]
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/storage/emulated/0/python/microblog/app/routes.py", line 438, in article_1
+    comment = Article1(body=form.post.data, author=current_user)
+  File "<string>", line 4, in __init__
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/sqlalchemy/orm/state.py", line 414, in _initialize_instance
+    manager.dispatch.init_failure(self, args, kwargs)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 66, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 187, in reraise
+    raise value
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/sqlalchemy/orm/state.py", line 411, in _initialize_instance
+    return manager.original_init(*mixed[1:], **kwargs)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/sqlalchemy/ext/declarative/base.py", line 658, in _declarative_constructor
+    setattr(self, k, kwargs[k])
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/sqlalchemy/orm/attributes.py", line 223, in __set__
+    self.impl.set(instance_state(instance),
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/sqlalchemy/orm/attributes.py", line 812, in set
+    value = self.fire_replace_event(state, dict_, value, old, initiator)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/sqlalchemy/orm/attributes.py", line 832, in fire_replace_event
+    value = fn(
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/sqlalchemy/orm/attributes.py", line 1175, in emit_backref_from_scalar_set_event
+    child_state, child_dict = instance_state(child),\
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/werkzeug/local.py", line 347, in __getattr__
+    return getattr(self._get_current_object(), name)
+AttributeError: 'AnonymousUserMixin' object has no attribute '_sa_instance_state'
+2020-11-06 16:12:08,053 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:50]
+2020-11-06 16:12:10,449 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:50]
+2020-11-06 16:12:41,726 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:50]
+2020-11-06 16:14:16,668 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:50]
+2020-11-06 16:14:19,563 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:50]
+2020-11-06 16:18:02,167 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:50]
+2020-11-06 16:18:04,336 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:50]
+2020-11-06 16:18:14,490 ERROR: Exception on /article_1 [POST] [in /data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py:1758]
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/storage/emulated/0/python/microblog/app/routes.py", line 438, in article_1
+    comment = Article1(body=form.post.data,author=current_user)
+  File "<string>", line 4, in __init__
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/sqlalchemy/orm/state.py", line 414, in _initialize_instance
+    manager.dispatch.init_failure(self, args, kwargs)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 66, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 187, in reraise
+    raise value
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/sqlalchemy/orm/state.py", line 411, in _initialize_instance
+    return manager.original_init(*mixed[1:], **kwargs)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/sqlalchemy/ext/declarative/base.py", line 658, in _declarative_constructor
+    setattr(self, k, kwargs[k])
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/sqlalchemy/orm/attributes.py", line 223, in __set__
+    self.impl.set(instance_state(instance),
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/sqlalchemy/orm/attributes.py", line 812, in set
+    value = self.fire_replace_event(state, dict_, value, old, initiator)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/sqlalchemy/orm/attributes.py", line 832, in fire_replace_event
+    value = fn(
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/sqlalchemy/orm/attributes.py", line 1175, in emit_backref_from_scalar_set_event
+    child_state, child_dict = instance_state(child),\
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/werkzeug/local.py", line 347, in __getattr__
+    return getattr(self._get_current_object(), name)
+AttributeError: 'AnonymousUserMixin' object has no attribute '_sa_instance_state'
+2020-11-06 16:18:50,453 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:50]
+2020-11-06 16:18:52,549 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:50]
+2020-11-06 16:19:53,830 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:50]
+2020-11-06 16:19:55,878 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:50]
+2020-11-06 16:20:53,058 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:50]
+2020-11-06 16:20:55,207 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:50]
+2020-11-06 16:21:06,798 ERROR: Exception on /images/db/Azar [GET] [in /data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py:1758]
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/storage/emulated/0/python/microblog/app/routes.py", line 212, in get_image_from_db
+    return app.response_class(image.img_data, mimetype='application/octet-stream')
+AttributeError: 'NoneType' object has no attribute 'img_data'
+2020-11-06 16:21:27,852 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:50]
+2020-11-06 16:21:45,031 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:50]
+2020-11-06 16:21:48,405 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:50]

@@ -1,0 +1,106 @@
+2020-11-06 20:16:29,480 ERROR: Exception on /user/Aslam [GET] [in /data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py:1758]
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask_login/utils.py", line 228, in decorated_view
+    return func(*args, **kwargs)
+  File "/storage/emulated/0/python/microblog/app/routes.py", line 252, in user
+    return render_template('user.html', user=user, posts=posts.items,next_url=next_url, prev_url=prev_url, form=form,posttype=True)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/templating.py", line 117, in _render
+    rv = template.render(context)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/storage/emulated/0/python/microblog/app/templates/user.html", line 1, in <module>
+    {% extends "base.html" %}
+  File "/storage/emulated/0/python/microblog/app/templates/base.html", line 1, in <module>
+    {% extends 'bootstrap/base.html' %}
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in <module>
+    {% block doc -%}
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in <module>
+    {%- block html %}
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in <module>
+    {% block body -%}
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in <module>
+    {% block content -%}
+  File "/storage/emulated/0/python/microblog/app/templates/base.html", line 52, in <module>
+    {% block app_content %}{% endblock %}
+  File "/storage/emulated/0/python/microblog/app/templates/user.html", line 7, in <module>
+    <img src="{{user.avatar()}}" style="width: 110px">
+  File "/storage/emulated/0/python/microblog/app/models.py", line 61, in avatar
+    return Image.open(os.path.join('app/static',self.username+".jpg"))
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/PIL/Image.py", line 2891, in open
+    fp = builtins.open(filename, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: 'app/static/Aslam.jpg'
+2020-11-06 20:20:42,018 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:50]
+2020-11-06 20:20:44,631 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:50]
+2020-11-06 20:20:51,158 ERROR: Exception on /user/Aslam [GET] [in /data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py:1758]
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask_login/utils.py", line 228, in decorated_view
+    return func(*args, **kwargs)
+  File "/storage/emulated/0/python/microblog/app/routes.py", line 252, in user
+    return render_template('user.html', user=user, posts=posts.items,next_url=next_url, prev_url=prev_url, form=form,posttype=True)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask/templating.py", line 117, in _render
+    rv = template.render(context)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/storage/emulated/0/python/microblog/app/templates/user.html", line 1, in <module>
+    {% extends "base.html" %}
+  File "/storage/emulated/0/python/microblog/app/templates/base.html", line 1, in <module>
+    {% extends 'bootstrap/base.html' %}
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in <module>
+    {% block doc -%}
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in <module>
+    {%- block html %}
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in <module>
+    {% block body -%}
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in <module>
+    {% block content -%}
+  File "/storage/emulated/0/python/microblog/app/templates/base.html", line 52, in <module>
+    {% block app_content %}{% endblock %}
+  File "/storage/emulated/0/python/microblog/app/templates/user.html", line 7, in <module>
+    <img src="{{user.avatar(110)}}" style="width: 110px">
+  File "/storage/emulated/0/python/microblog/app/models.py", line 62, in avatar
+    im = Image.open(os.path.join('app/static',self.username+".png"))
+  File "/data/data/com.termux/files/usr/lib/python3.9/site-packages/PIL/Image.py", line 2891, in open
+    fp = builtins.open(filename, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: 'app/static/Aslam.png'
+2020-11-06 20:22:04,157 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:50]
+2020-11-06 20:22:06,295 INFO: Microblog startup [in /storage/emulated/0/python/microblog/app/__init__.py:50]

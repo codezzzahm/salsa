@@ -1,0 +1,31 @@
+    <table class="table table-hover">
+        <tr>
+            <td width="60px">
+                <a href="{{ url_for('user', username=post.author.username) }}">
+                    <img src="/static/{{post.author.username}}.png" style="width: 60px">
+                </a>
+            </td>
+            <td>
+                <a href="{{ url_for('user', username=post.author.username) }}">
+                    {{ post.author.username }}
+                </a>
+                 {{ moment(post.timestamp).fromNow() }}:
+                <br> 
+                {{ post.body }} 
+                <br>
+                {% if Reply %}
+                  {% if post.author==current_user %}
+                     <a href="{{url_for('deletemessage',message=post.body)}}">Delete</a>
+                  {% elif post.author!=current_user %}
+                     <a href="{{ url_for('messages',recipient=post.author.username) }}">Reply</a> 
+                  {% endif %}
+                {% endif %}
+                <br>
+                {% if posttype %} 
+                {% if current_user.username==post.author.username %} 
+                    <a href="{{url_for('editpost',post=post.body)}}">Edit</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="{{url_for('deletepost',post=post.body)}}">Delete</a> 
+                {% endif %} 
+                {% endif %}
+            </td>
+        </tr>
+    </table>
